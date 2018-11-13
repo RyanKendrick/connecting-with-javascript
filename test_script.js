@@ -17,6 +17,7 @@ client.connect((err) => {
     return console.error("Connection Error", err);
   }
   client.query("SELECT $1::int AS number", ["1"], (err, result) => {
+    console.log(result);
     if (err) {
       return console.error("error running query", err);
     }
